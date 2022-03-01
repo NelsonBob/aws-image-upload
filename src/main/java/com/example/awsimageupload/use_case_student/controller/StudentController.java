@@ -1,7 +1,7 @@
-package use_case_student.controller;
+package com.example.awsimageupload.use_case_student.controller;
 
-import use_case_student.entity.Student;
-import use_case_student.service.StudentService;
+import com.example.awsimageupload.use_case_student.entity.Student;
+import com.example.awsimageupload.use_case_student.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;

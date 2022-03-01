@@ -1,7 +1,7 @@
-package use_case_student.service;
+package com.example.awsimageupload.use_case_student.service;
 
-import use_case_student.dao.StudentDao;
-import use_case_student.entity.Student;
+import com.example.awsimageupload.use_case_student.dao.StudentDao;
+import com.example.awsimageupload.use_case_student.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

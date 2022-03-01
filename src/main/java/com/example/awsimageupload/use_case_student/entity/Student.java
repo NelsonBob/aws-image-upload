@@ -1,4 +1,4 @@
-package use_case_student.entity;
+package com.example.awsimageupload.use_case_student.entity;
 
 public class Student {
 

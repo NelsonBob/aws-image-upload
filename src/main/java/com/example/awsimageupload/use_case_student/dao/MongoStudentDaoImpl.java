@@ -1,6 +1,6 @@
-package use_case_student.dao;
+package com.example.awsimageupload.use_case_student.dao;
 
-import use_case_student.entity.Student;
+import com.example.awsimageupload.use_case_student.entity.Student;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 

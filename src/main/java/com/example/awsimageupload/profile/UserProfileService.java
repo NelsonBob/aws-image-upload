@@ -88,8 +88,5 @@ public class UserProfileService {
         return user.getUserProfileImageLink()
                 .map(key -> fileStore.download(path, key))
                 .orElse(new byte[0]);
-
-
-
     }
 }
