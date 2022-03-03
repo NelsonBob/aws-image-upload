@@ -15,8 +15,8 @@ env:
   # Java
   JAVA_VERSION: 1.15
   # DockerHub
-  DOCKER_HUB_USERNAME: nels.fomekong@gmail.com
-  DOCKER_HUB_PASSWORD: admin1234
+  DOCKER_HUB_USERNAME: doc123456789123456789
+  DOCKER_HUB_PASSWORD: 546c36f4-26cf-46b1-87e3-2224d7542887
   # AWS & Elastic Bean Stalk
   AWS_REGION: eu-west-3
   EB_ENVIRONMENT_NAME: Uploadstudent-env
