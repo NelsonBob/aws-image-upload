@@ -58,7 +58,7 @@ jobs:
 
       - name: Maven Clean Package and Push to Dockerhub
         run: |
-           - mvn clean compile
+            mvn clean compile
  
             image: maven:3.6.3-jdk-11
       
