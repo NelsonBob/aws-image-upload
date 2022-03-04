@@ -43,7 +43,7 @@ jobs:
         uses: actions/setup-node@v2
         with: 
           node-version: '16'
-      - run: echo "node -v"
+      - run: node -v
         
       - name: Setup Java JDK
         uses: actions/setup-java@v1.4.3
