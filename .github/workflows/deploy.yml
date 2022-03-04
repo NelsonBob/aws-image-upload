@@ -44,10 +44,6 @@ jobs:
         with: 
           node-version: '6.8.1'
       - run: node -v
-      - uses: actions/checkout@v3
-      - name: Setup npm
-         npm-version:'5.5.1'
-      - run: npm -v
         
       - name: Setup Java JDK
         uses: actions/setup-java@v1.4.3
