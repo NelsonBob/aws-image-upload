@@ -49,16 +49,12 @@ jobs:
       - name: Build Number
         id: build-number
         run: echo "::set-output name=BUILD_NUMBER::$(date '+%-d.%-m.%Y.%-H.%-M.%-S')"
-      - name: Setup Node
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-         node-version: '16'
-         cache: 'npm'
          
       - name: Docker Login
         uses: docker/login-action@f3364599c6aa293cdc2b8391b1b56d0c30e45c8a
+      - uses: actions/setup-node@v2
         with:
+          node-version: '16'
           username: ${{ env.DOCKER_HUB_USERNAME }}
           password: ${{ env.DOCKER_HUB_PASSWORD }}
 
