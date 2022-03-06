@@ -1,38 +1,44 @@
 package com.example.awsimageupload.use_case_student.service;
 
-import com.example.awsimageupload.use_case_student.dao.StudentDao;
+import com.example.awsimageupload.use_case_student.dao.StudentRepository;
 import com.example.awsimageupload.use_case_student.entity.Student;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.Optional;
 
 @Service
 public class StudentService {
 
-    @Autowired
-    @Qualifier("mongoData")
-    private StudentDao studentDao;
+
+    private StudentRepository studentRepository;
+
+    public StudentService(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
 
     public Collection<Student> getAllStudents(){
-        return this.studentDao.getAllStudents();
+        return this.studentRepository.findAll();
     }
 
-    public Student getStudentById(int id){
-        return this.studentDao.getStudentById(id);
+    public Optional<Student> getStudentById(Long id){
+        return this.studentRepository.findById(id);
     }
 
 
-    public void removeStudentById(int id) {
-        this.studentDao.removeStudentById(id);
+    public void removeStudentById(Long id) {
+        this.studentRepository.deleteById(id);
     }
 
     public void updateStudent(Student student){
-        this.studentDao.updateStudent(student);
+       Student studentToUpdate =  studentRepository.getByName(student.getId());
+       studentToUpdate.setCourse(student.getCourse());
+       studentToUpdate.setName(student.getName());
+       studentToUpdate.setId(student.getId());
+        this.studentRepository.save(student);
     }
 
     public void insertStudent(Student student) {
-        this.studentDao.insertStudentToDb(student);
+        this.studentRepository.save(student);
     }
 }

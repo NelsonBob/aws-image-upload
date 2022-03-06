@@ -7,6 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/students")
@@ -21,12 +22,12 @@ public class StudentController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Student getStudentById(@PathVariable("id") int id){
+    public Optional<Student> getStudentById(@PathVariable("id") Long id){
         return studentService.getStudentById(id);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public void deleteStudentById(@PathVariable("id") int id){
+    public void deleteStudentById(@PathVariable("id") Long id){
         studentService.removeStudentById(id);
     }
 
