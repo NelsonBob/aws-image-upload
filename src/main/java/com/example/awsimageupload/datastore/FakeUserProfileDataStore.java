@@ -19,7 +19,6 @@ public class FakeUserProfileDataStore {
         USER_PROFILES.add(new UserProfile(UUID.fromString("5b409e35-d77a-4742-9271-5a8eca95c628"),"Nelson",null));
         USER_PROFILES.add(new UserProfile(UUID.fromString("16209d16-291f-417e-b006-1d7856ace109"),"Alysson",null));
         USER_PROFILES.add(new UserProfile(UUID.fromString("5b409e35-d77a-4742-9271-5a8eca95c620"),"Hang",null));
-        USER_PROFILES.add(new UserProfile(UUID.fromString("16209d16-291f-417e-b006-1d7856ace100"),"Karina",null));
 
     }
     public  List<UserProfile> getUserProfiles(){
